@@ -1,4 +1,4 @@
-let tabla = {
+const tab1 = {
   filters: {},
   competition: {
     id: 2014,

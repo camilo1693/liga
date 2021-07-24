@@ -1,4 +1,4 @@
-let partidos ={
+const partidos ={
     "count": 380,
     "filters": {},
     "competition": {
