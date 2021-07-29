@@ -1,0 +1,19 @@
+.divtab{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+
+}
+
+.escu{
+    width: 35px;
+    height: 35px;
+}
+
+.fondo{
+    background-image: url(../img/Football-field-lawn-lights_2880x1800.jpg) ;
+    background-size:cover;
+    background-position: center;
+}

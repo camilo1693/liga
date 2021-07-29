@@ -10,6 +10,7 @@ function creartabla() {
 
     let image = document.createElement("img");
     image.src = tab1.standings[0].table[i].team.crestUrl;
+    image.classList.add("escu");
 
     let par = document.createElement("p");
     par.innerHTML = tab1.standings[0].table[i].playedGames;
