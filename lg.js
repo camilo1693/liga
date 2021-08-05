@@ -66,3 +66,4 @@ let inputBuscar= document.getElementById("equi");
 inputBuscar.addEventListener("keyup", function () {
   buscar(partidos.matches);
 });
+
