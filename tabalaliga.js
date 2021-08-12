@@ -1,4 +1,39 @@
-creartabla(tab1.standings[0].table);
+let url =
+  "https://api.football-data.org/v2/competitions/2014/standings";
+let token = "c471bfdf98ae44b892901ab81aaea626";
+
+const getData = async () => {
+  let info = await fetch(url, {
+    method: "GET",
+    headers: {
+      "X-Auth-Token": token,
+    },
+  })
+    .then(function (response) {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+      let juego = data.standings;
+      console.log(juego)
+      return juego;
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  return info;
+};
+
+const init = async () => {
+  let clasificacion = await getData();
+  console.log(clasificacion);
+  creartabla(clasificacion[0].table);
+ ;
+};
+
+init();
+
+
 
 function creartabla(juegos1) {
   let cuerpotabla = document.getElementById("tb2");

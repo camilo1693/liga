@@ -16,4 +16,6 @@
     background-image: url(../img/Football-field-lawn-lights_2880x1800.jpg) ;
     background-size:cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }

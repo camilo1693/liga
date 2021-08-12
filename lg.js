@@ -1,7 +1,45 @@
-creartabla(partidos.matches);
+let inputBuscar = document.getElementById("equi");
+
+let url =
+  "https://api.football-data.org/v2/competitions/2014/matches?season=2020";
+let token = "c471bfdf98ae44b892901ab81aaea626";
+
+const getData = async () => {
+  let info = await fetch(url, {
+    method: "GET",
+    headers: {
+      "X-Auth-Token": token,
+    },
+  })
+    .then(function (response) {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+      let juego = data.matches;
+      return juego;
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  return info;
+};
+
+const init = async () => {
+  let matches = await getData();
+  console.log(matches);
+  creartabla(matches);
+  
+  inputBuscar.addEventListener("keyup", function () {
+    buscar(matches);
+  });
+};
+
+init();
+
 function creartabla(juegos) {
   let cuerpotabla = document.getElementById("tb1");
-  cuerpotabla.innerText ="";
+  cuerpotabla.innerText = "";
 
   for (let i = 0; i < juegos.length; i++) {
     const fila = document.createElement("tr");
@@ -30,7 +68,7 @@ function creartabla(juegos) {
     resultado.innerHTML =
       juegos[i].score.fullTime.homeTeam +
       "-" +
-      partidos.matches[i].score.fullTime.awayTeam;
+      juegos[i].score.fullTime.awayTeam;
 
     let resultadopartido = [
       local,
@@ -56,14 +94,14 @@ function buscar(partido) {
   }
   let filtros = partido.filter((nombres) => {
     return (
-      nombres.homeTeam.name.toLowerCase().includes(inputBuscar.value.toLowerCase()) ||
-      nombres.awayTeam.name.toLowerCase().includes(inputBuscar.value.toLowerCase())
+      nombres.homeTeam.name
+        .toLowerCase()
+        .includes(inputBuscar.value.toLowerCase()) ||
+      nombres.awayTeam.name
+        .toLowerCase()
+        .includes(inputBuscar.value.toLowerCase())
     );
   });
   creartabla(filtros);
 }
-let inputBuscar= document.getElementById("equi");
-inputBuscar.addEventListener("keyup", function () {
-  buscar(partidos.matches);
-});
 
