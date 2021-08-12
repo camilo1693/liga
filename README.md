@@ -41,4 +41,4 @@
 
 - Mejorar la presentacion y diseño de las paginas
 - Añadir una pagina con en laa cual escoger nuestro equipo favorito y que salgan sus resultados y partidos jugados y por jugar.
-- Añadir otras ligas de igual popularidad en el mundo
+- Añadir otras ligas de igual popularidad en el mundo.
