@@ -36,3 +36,9 @@
 - `buscar()`: Esta funcion es la q nos permite buscar el equipo que deseamos en nuestra tabla de partidos.
 
 - `estadisticas()`: Esta función  es la encargada de realizar el calculo la media de goles por partido de los equipos y luego organizarlos de mayor a menor y asi en la tabla mostrar solo los 5 mejores.
+
+## TO-DO
+
+- Mejorar la presentacion y diseño de las paginas
+- Añadir una pagina con en laa cual escoger nuestro equipo favorito y que salgan sus resultados y partidos jugados y por jugar.
+- Añadir otras ligas de igual popularidad en el mundo
