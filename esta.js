@@ -88,7 +88,6 @@ function estadisticas(partidos) {
   crearTabla(estadistica);
 }
 
-// estadisticas(partido);
 function crearTabla(estadistica) {
   let top5 = estadistica.slice(0, 5);
   console.log(top5);
